@@ -1,0 +1,40 @@
+package words;
+
+public class prnum {
+	//function to print all the prime no. till N
+		static void prime_N(int N)
+		{//declaring variables 
+			int x,y,flg;
+			//printing display msg
+			System.out.println("All the prime numbers within 1 and"+N+"are");
+			//using loop for traversing the no.s from 1 to N
+			for(x=1;x<=N;x++)
+				//if 0 or 1 appear as they are nor composite nor prime
+				{
+				if(x==0||x==1)
+					continue;
+				//using flag variable to check if given no. is prime or not
+				flg=1;
+				for(y=2;y<=x/2;y++)
+				{
+					if(x%y==0)
+					{
+						flg=0;
+						break;
+					}
+				}
+				//if flg =1 then x is prime but if it is 0 then it is not prime
+				if(flg==1)
+					System.out.println(x+"");
+				}
+		}
+		//main code
+		public static void main(String[]args)
+		{
+			int N=50;
+			prime_N(N);
+		}
+	}
+
+
+
